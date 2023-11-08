@@ -135,7 +135,7 @@ if df is not None and daf is not None:
         ######### Arquivo  income PL Abaixo de 60.000
         output1 = io.BytesIO()
         st.markdown(" Download excel clientes income e saldo menor R$ 60.000,00")
-        with pd.ExcelWriter(output, engine='xlsxwriter') as writer:
+        with pd.ExcelWriter(output1, engine='xlsxwriter') as writer:
            filtro_income.to_excel(writer,
                                         sheet_name='income.xlsx',
                                           index=False)
@@ -153,7 +153,7 @@ if df is not None and daf is not None:
         output2 = io.BytesIO()
         st.markdown(" Download excel clientes com Saldo abaixo de R$ 1000,00")
 
-        with pd.ExcelWriter(output, engine='xlsxwriter') as writer:
+        with pd.ExcelWriter(output2, engine='xlsxwriter') as writer:
             filtro_pl_abaixo_100k.to_excel(writer,
                                         sheet_name='pl_abaixo_1000k.xlsx',
                                           index=False)
@@ -169,7 +169,7 @@ if df is not None and daf is not None:
          ######### Arquivo PL 0 (Planilha de controle)
         output3 = io.BytesIO()
         st.markdown(" Download excel clientes com Saldo 0,00")
-        with pd.ExcelWriter(output, engine='xlsxwriter') as writer:
+        with pd.ExcelWriter(output3, engine='xlsxwriter') as writer:
             filtro_pl_0.to_excel(writer,
                                         sheet_name='contas_0.xlsx',
                                           index=False)
