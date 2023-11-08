@@ -56,9 +56,9 @@ if df is not None and daf is not None:
     #controle["2023-10-31 00:00:00"] = pd.to_datetime(controle["2023-10-31 00:00:00"])
 
     pl['CONTA'] = pl['CONTA'].astype(str)
-    pl['CONTA'] = list(map(
-        lambda x: x[2:], pl['CONTA']
-    ))
+    #pl['CONTA'] = list(map(
+    #    lambda x: x[2:], pl['CONTA']
+    #))
     pl = pl.rename(columns={
         'CONTA':'Conta'
     })
