@@ -6,7 +6,8 @@ import plotly.graph_objects as pgo
 import base64
 from io import BytesIO
 import io
-import xlsxwriter as xlsxwriter
+import xlsxwriter
+
 #####################################
 #Box para receber arquivos
 df = None
