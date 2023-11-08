@@ -162,7 +162,7 @@ if df is not None and daf is not None:
         st.download_button(
             label="Clique para fazer o download",
             data=output2,
-            file_name='Cliente_saldo_1000.xlsx',
+            file_name='Cliente_saldo_1k.xlsx',
             key='download_button2'
         )
 
