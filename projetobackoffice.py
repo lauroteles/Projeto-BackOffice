@@ -141,6 +141,7 @@ if df is not None and daf is not None:
             key='download_button'
         )
         ######### Arquivo  income PL Abaixo de 60.000
+        output1 = io.BytesIO()
         st.markdown(" Download excel clientes income e saldo menor R$ 60.000,00")
         with pd.ExcelWriter(output, engine='xlsxwriter') as writer:
            filtro_income.to_excel(writer,
@@ -148,15 +149,16 @@ if df is not None and daf is not None:
                                           index=False)
         
     
-        output.seek(0)
+        output1.seek(0)
         st.download_button(
             label="Clique para fazer o download",
-            data=output,
+            data=output1,
             file_name='Income_abaixo_60k.xlsx',
             key='download_button1'
         )
         ### Arquivo PL abaixo de 1.000,00
 
+        output2 = io.BytesIO()
         st.markdown(" Download excel clientes com Saldo abaixo de R$ 1000,00")
 
         with pd.ExcelWriter(output, engine='xlsxwriter') as writer:
@@ -164,15 +166,16 @@ if df is not None and daf is not None:
                                         sheet_name='pl_abaixo_1000k.xlsx',
                                           index=False)
 
-        output.seek(0)
+        output2.seek(0)
         st.download_button(
             label="Clique para fazer o download",
-            data=output,
+            data=output2,
             file_name='Cliente_saldo_1000.xlsx',
             key='download_button2'
         )
 
          ######### Arquivo PL 0 (Planilha de controle)
+        output3 = io.BytesIO()
         st.markdown(" Download excel clientes com Saldo 0,00")
         with pd.ExcelWriter(output, engine='xlsxwriter') as writer:
             filtro_pl_0.to_excel(writer,
@@ -180,13 +183,14 @@ if df is not None and daf is not None:
                                           index=False)
         
         
-        output.seek(0)
+        output3.seek(0)
         st.download_button(
             label="Clique para fazer o download",
-            data=output,
+            data=output3,
             file_name='Contas_zeradas.xlsx',
             key='download_button3'
         )
+        
 
 
  
