@@ -3,4 +3,4 @@ openpyxl==3.1.2
 pandas==2.1.2
 plotly==5.17.0
 streamlit==1.27.2
-xlsxwriter==
+xlsxwriter==1.4.4
