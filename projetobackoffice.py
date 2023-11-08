@@ -54,17 +54,7 @@ if df is not None and daf is not None:
 
     controle    =   controle.iloc[:,[1,2,4,5,12,-1,7]]
     #controle["2023-10-31 00:00:00"] = pd.to_datetime(controle["2023-10-31 00:00:00"])
-    '''
-    controle = controle[[   
-                                    'Nome',
-                                        'Conta',
-                                        'UF','Assessor',
-                                        'Status',
-                                        'Carteira',"2023-10-31 00:00:00"
 
-    
-    ]]
-    '''
     pl['CONTA'] = pl['CONTA'].astype(str)
     pl['CONTA'] = list(map(
         lambda x: x[2:], pl['CONTA']
