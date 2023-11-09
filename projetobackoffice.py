@@ -7,7 +7,8 @@ import base64
 from io import BytesIO
 import io
 import xlsxwriter
-
+from PIL import Image
+st.sidebar.image("WhatsApp Image 2023-11-08 at 14.13.55.jpg")
 #####################################
 #Box para receber arquivos
 df = None
