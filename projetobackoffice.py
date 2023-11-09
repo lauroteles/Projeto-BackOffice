@@ -86,7 +86,7 @@ if df is not None and daf is not None:
         (arquivo_final['Carteira']== 'INC') & (arquivo_final.PL<60000)].reset_index(drop=True)
 
     filtro_abaixo100k = arquivo_final.loc[
-        (arquivo_final['Carteira']!='INC')&(arquivo_final['PL']<100000)&(arquivo_final['Carteira']!='FUND')].reset_index(drop=True)
+       (arquivo_final['Carteira']!='INC')&(arquivo_final['PL']<100000)&(arquivo_final['Carteira']!='FUND')].reset_index(drop=True)
     filtro_pl_0 = arquivo_final[arquivo_final.iloc[:,-2]<1].reset_index(drop=True)
 
     filtro_abaixo100k.to_excel('Testearquivo.xlsx')
