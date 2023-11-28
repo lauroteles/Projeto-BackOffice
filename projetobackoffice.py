@@ -63,6 +63,8 @@ if df is not None and daf is not None:
     pl = pl.rename(columns={
         'CONTA':'Conta'
     })
+  
+    controle['Conta']=controle['Conta'].astype(str).str[:-2]
 
     controle['Conta'] = controle['Conta'].astype(str)
     #controle['Conta'] = list(map(
